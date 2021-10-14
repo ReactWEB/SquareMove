@@ -1,0 +1,89 @@
+.box__1{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+  background-color: violet;
+  left: 40%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.box__2{
+  position: absolute;
+  display: grid;
+  grid-column: 1 / 4;
+  grid-row: 1 / 3;
+  grid-gap: 10px;  
+  width: 400px;
+  height: 150px;
+  border: 1px solid gray;
+  left: 70%;
+  top: 35%;
+}
+button{
+  width: 90%;
+  margin-left: 5%;
+}
+.box__2-up{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.box__2-left{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.box__2-down{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.box__2-right{
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.move-up{
+  animation: moveUp 5s linear;
+}
+.move-left{
+  animation: moveLeft 5s linear;
+}
+.move-down{
+  animation: moveDown 5s linear;
+}
+.move-right{
+  animation: moveRight 5s linear;
+}
+
+@keyframes moveUp{
+  100%{
+    transform: translateY(-250px);
+  }
+}
+@keyframes moveLeft{
+  100%{
+    transform: translateX(-250px);
+  }
+}
+@keyframes moveDown {
+  100%{
+    transform: translateY(250px);
+  }
+}
+@keyframes moveRight{
+  100%{
+    transform: translateX(250px);
+  }
+}
+
+.change-size {
+  animation: changeSize 10s linear;
+}
+
+@keyframes changeSize{  
+  0%{
+    transform: scale(5);
+  }
+  100%{
+    transform: scale(5);
+  }
+}
